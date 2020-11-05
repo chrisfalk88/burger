@@ -55,4 +55,14 @@ const orm = {
       });
     },
   //updateOne()
+  updateOne: function(table, devoured, id, cb){
+      //is the condition here to change its name or its devoured state? 
+      const queryString = `UPDATE ${table} SET ${devoured} WHERE id = ${id};`;
+      connection.query(queryString, function(err, result){
+          if (err) throw err;
+          cb(result);
+      })
+  }
 };
+
+module.exports = orm;
