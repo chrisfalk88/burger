@@ -11,7 +11,4 @@ CREATE TABLE burgers (
     burger_name VARCHAR(30) NOT NULL,
     devoured BOOLEAN NOT NULL,
     PRIMARY KEY (id)  
-
-
-
-)
+);
