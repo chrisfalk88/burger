@@ -8,14 +8,15 @@ const burger = {
         })
     },
 
-    create: function(burger_name, isDevoured, cb) {
-        orm.insertOne("burgers", burger_name, isDevoured, function(res){
+
+    create: function(col, val, cb) {
+        orm.insertOne("burgers", col, val, function(res){
             cb(res);
         })
     },
     //still not sure if this function is quite what we want 
-    update: function(isDevoured, id, cb) {
-        orm.updateOne("burgers", isDevoured, id, function(res){
+    update: function(col, val, id, cb) {
+        orm.updateOne("burgers", col, val, id, function(res){
             cb(res);
         })
     }

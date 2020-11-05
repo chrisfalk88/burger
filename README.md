@@ -7,5 +7,7 @@ the follow NPM Packages are required:
     * mySQL
 
 ## QUESTIONS for Hannah 
+
 update on ORM file 
+routes 
 how the frick does all this work 

@@ -39,7 +39,7 @@ function objToSql(ob) {
 const orm = {
   //selectAll()
   selectAll: function (tableName, cb) {
-    const queryString = `Select * FROM ${tableName};`;
+    const queryString = `SELECT * FROM ${tableName};`;
     connection.query(queryString, function (err, result) {
       if (err) throw err;
       cb(result);
@@ -47,17 +47,17 @@ const orm = {
   },
 
   //insertOne() create
-  insertOne: function (table, burger_name, devoured, cb) {
-      const queryString = `INSERT INTO ${table} (burger_name, devoured) VALUES (${burger_name}, ${devoured});`;
+  insertOne: function (table, col, val, cb) {
+      const queryString = `INSERT INTO ${table} (${col.toString()}) VALUES (${val.toString()});`;
       connection.query(queryString, function (err, result){
         if (err) throw err;
         cb(result);
       });
     },
   //updateOne()
-  updateOne: function(table, devoured, id, cb){
+  updateOne: function(table, col, val, id, cb){
       //is the condition here to change its name or its devoured state? 
-      const queryString = `UPDATE ${table} SET ${devoured} WHERE id = ${id};`;
+      const queryString = `UPDATE ${table} SET ${col} = ${val} WHERE id = ${id};`;
       connection.query(queryString, function(err, result){
           if (err) throw err;
           cb(result);

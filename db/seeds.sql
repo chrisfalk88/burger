@@ -1,6 +1,6 @@
 ## SEEDS 
 
-INSERT INTO burgers (burger_name, devoured) VALUES ("Spicy Mama", 0);
-INSERT INTO burgers (burger_name, devoured) VALUES ("BBQ Burger", 0);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Old Fashioned", 0);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Hawaiian", 0);
+INSERT INTO burgers (burger_name) VALUES ("Spicy Mama");
+INSERT INTO burgers (burger_name) VALUES ("BBQ Burger");
+INSERT INTO burgers (burger_name) VALUES ("Old Fashioned");
+INSERT INTO burgers (burger_name) VALUES ("Hawaiian");
