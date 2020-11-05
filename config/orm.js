@@ -38,15 +38,15 @@ function objToSql(ob) {
 
 const orm = {
   //selectAll()
-  selectAll: function (tableInput, cb) {
-    const queryString = `Select * FROM ${tableInput};`;
+  selectAll: function (tableName, cb) {
+    const queryString = `Select * FROM ${tableName};`;
     connection.query(queryString, function (err, result) {
       if (err) throw err;
       cb(result);
     });
   },
 
-  //insertOne()
+  //insertOne() create
   insertOne: function (table, burger_name, devoured, cb) {
       const queryString = `INSERT INTO ${table} (burger_name, devoured) VALUES (${burger_name}, ${devoured});`;
       connection.query(queryString, function (err, result){
