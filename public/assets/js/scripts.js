@@ -1,7 +1,6 @@
 
 
 // add a new burger from the form 
-
 $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
@@ -22,3 +21,17 @@ $(".create-form").on("submit", function(event) {
       }
     );
   });
+
+
+  //click handler to change devoured state 
+$(".devourButton").on("click", function(event){
+  const id = $(this).data("id");
+  console.log(id);
+
+  $.ajax("/api/burgers/" + id, {
+    type: "PUT"
+  }).then(function() {
+    console.log("devoured state was changed");
+    location.reload();
+  });
+})
