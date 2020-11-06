@@ -48,7 +48,7 @@ const orm = {
 
   //insertOne() create
   insertOne: function (table, col, val, cb) {
-      const queryString = `INSERT INTO ${table} (${col.toString()}) VALUES (${val.toString()});`;
+      const queryString = `INSERT INTO ${table} (${col.toString()}) VALUES ("${val.toString()}");`;
       connection.query(queryString, function (err, result){
         if (err) throw err;
         cb(result);

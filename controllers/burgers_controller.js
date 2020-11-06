@@ -10,7 +10,7 @@ router.get("/", function(req, res){
         const hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        //console.log(hbsObject);
         res.render("index",hbsObject);
     });
 });
@@ -18,7 +18,7 @@ router.get("/", function(req, res){
 //might need a little help on this one 
 router.post("/api/burgers", function(req, res){
     // req.body.burgerName will come from the form data in our handlebars 
-    burger.create("burger_name", req.body.burgerName, function(data){
+    burger.create("burger_name", req.body.name, function(data){
 
     res.json("Success");
     })
