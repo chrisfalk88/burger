@@ -2,14 +2,45 @@ h1 {
     font-size: xx-large;
 }
 
+h2 {
+    font-size: x-large;
+}
 .fa-hamburger {
     font-size: 200px;
 }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    margin: 5px;
+}
+
+#addBurger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#toEatColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 #mainColumn {
+    font-size: large;;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 

@@ -8,24 +8,25 @@
                 <br>
                 <i class="fas fa-hamburger"></i>
                 <br>
-                <div class="columns">
-                    <div class="column">
 
-                        <h2> Burgers that are not eaten </h2>
+                <div class="columns">
+                    <div class="column" id="toEatColumn">
+
+                        <h2> Burgers to EAT! </h2>
                         <br>
                         <ul>
                             {{#each burgers}}
                             {{#unless devoured}}
                             <li>
                                 {{burger_name}}
-                                <button class="devourButton" data-id="{{id}}">Devour this beast</button>
+                                <button class="devourButton button" data-id="{{id}}">EAT IT!</button>
                             </li>
                             {{/unless}}
                             {{/each}}
                         </ul>
                     </div>
                     <div class="column">
-                        <h2> Burgers that have been eaten </h2>
+                        <h2> Burgers You've Eaten </h2>
                         <br>
                         <ul>
                             {{#each burgers }}
@@ -39,15 +40,21 @@
                     </div>
                 </div>
                 <br>
-                <h2>Add a Burger</h2>
+                <div class="columns">
+                    <div class="column" id= "addBurger">
 
-                <div class="field">
-                    <form class="create-form">
+                        <h2>Add a Burger</h2>
+                        <div class="field">
+                            <form class="create-form">
 
-                        <div class="form-group">
-                            <label for="burgerName">Burger Name:</label>
-                            <input type="text" id="burgerName" name="name"><button type="submit">Create Burger</button>
+                                <div class="form-group">
+                                    <label for="burgerName">Burger Name:</label>
+                                    <input class="input" type="text" id="burgerName" name="name">
+                                    <button class="button" type="submit">Create Burger</button>
+                                </div>
+
                         </div>
+                    </div>
 
 
                     </form>
