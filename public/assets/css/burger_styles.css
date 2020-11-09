@@ -1,0 +1,15 @@
+h1 {
+    font-size: xx-large;
+}
+
+.fa-hamburger {
+    font-size: 200px;
+}
+#mainColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
