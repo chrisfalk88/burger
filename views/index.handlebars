@@ -10,10 +10,10 @@
                 <br>
 
                 <div class="columns">
-                    <div class="column" id="toEatColumn">
+                    <div class="column EatColumn">
 
                         <h2> Burgers to EAT! </h2>
-                        <br>
+                        <hr>
                         <ul>
                             {{#each burgers}}
                             {{#unless devoured}}
@@ -25,9 +25,9 @@
                             {{/each}}
                         </ul>
                     </div>
-                    <div class="column">
+                    <div class="column EatColumn">
                         <h2> Burgers You've Eaten </h2>
-                        <br>
+                        <hr>
                         <ul>
                             {{#each burgers }}
                             {{#if devoured}}
